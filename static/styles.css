@@ -1,0 +1,21 @@
+
+body{ font-family: system-ui, Arial, sans-serif; background:#f5f7fb; }
+.chat-container{ max-width:720px; margin:40px auto; background:white; padding:20px; border-radius:12px; box-shadow:0 6px 30px rgba(20,20,40,0.06); }
+.chat-window{ height:360px; overflow:auto; border:1px solid #eee; padding:12px; border-radius:8px; background:#fbfdff; }
+.bot-message{ background:#eef6ff; padding:10px 12px; margin:8px 0; border-radius:8px; display:inline-block; }
+.user-message{ background:#dfecec; padding:10px 12px; margin:8px 0; border-radius:8px; display:inline-block; align-self:flex-end; }
+.input-row{ display:flex; gap:8px; margin-top:12px; }
+.input-row input{ flex:1; padding:10px; border-radius:8px; border:1px solid #ddd; }
+input-row button{ padding:10px 14px; border-radius:8px; border:none; background:#2563eb; color:white; cursor:pointer; }
+.controls{ margin-bottom:12px; display:flex; gap:12px; align-items:center; }
+.admin-link{ margin-left:auto; font-size:14px; text-decoration:none; color:#2563eb; }
+.admin-container{ max-width:600px; margin:40px auto; background:white; padding:20px; border-radius:12px; box-shadow:0 4px 20px rgba(0,0,0,0.05); }
+.admin-container form{ display:flex; flex-direction:column; gap:8px; }
+.admin-container input[type=text], .admin-container input[type=password], .admin-container input[type=file]{ padding:8px; border-radius:6px; border:1px solid #ddd; }
+.admin-container button{ padding:10px; border-radius:8px; border:none; background:#2563eb; color:white; cursor:pointer; }
+.flash-wrap{ margin-bottom:10px; }
+.flash{ padding:8px; border-radius:6px; margin-bottom:6px; }
+.flash.success{ background:#e6ffed; color:#1a7f37; }
+.flash.danger{ background:#ffe6e6; color:#8b1a1a; }
+.flash.info{ background:#eef3ff; color:#12397a; }
+.note{ margin-top:12px; color:#666; font-size:14px; }
