@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Admin Dashboard</title>
+<link rel="stylesheet" href="/static/styles.css"></head>
+<body>
+  <div class="admin-container">
+    <h2>Admin Dashboard</h2>
+    <div class="nav"><a href="{{ url_for('index') }}">Home</a> | <a href="{{ url_for('admin_logout') }}">Logout</a></div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-wrap">
+          {% for cat, msg in messages %}<div class="flash {{cat}}">{{ msg }}</div>{% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    <p>Current FAQ rows: <strong>{{ rows }}</strong></p>
+    <form method="post" enctype="multipart/form-data">
+      <label>Upload new FAQ Excel (this will replace existing faq.xlsx)</label>
+      <input type="file" name="faq_file" accept=".xlsx,.xls" required>
+      <button type="submit">Upload & Replace</button>
+    </form>
+    <p class="note">Upload Mode: Replace entire faq.xlsx (Admin option A, Upload Mode 1)</p>
+  </div>
+</body>
+</html>
