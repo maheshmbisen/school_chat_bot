@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>School Chatbot</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="chat-container">
+    <h1>School Help Bot</h1>
+    <div class="controls">
+      <label for="role">I am a</label>
+      <select id="role">
+        <option value="student">Student</option>
+        <option value="parent">Parent</option>
+      </select>
+      <a class="admin-link" href="/admin/login">Admin</a>
+    </div>
+    <div id="chat" class="chat-window">
+      <div class="bot-message">Hi! Ask me anything about school.</div>
+    </div>
+    <div class="input-row">
+      <input id="message" type="text" placeholder="Type your question and press Enter" />
+      <button id="send">Send</button>
+    </div>
+    <div class="note">Tip: admin can upload new faq.xlsx in Admin Dashboard to update answers.</div>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
